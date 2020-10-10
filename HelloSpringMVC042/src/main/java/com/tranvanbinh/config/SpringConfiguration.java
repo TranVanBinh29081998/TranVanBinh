@@ -13,9 +13,8 @@ import org.springframework.web.servlet.view.JstlView;
 @ComponentScan(basePackages="com.tranvanbinh.controller")
 public class SpringConfiguration {
 	@Bean(name="jspViewResolver")
-	public ViewResolver viewResolver()
-	{
-		InternalResourceViewResolver viewResolver=new InternalResourceViewResolver();
+	public ViewResolver viewResolver() {
+		InternalResourceViewResolver viewResolver = new InternalResourceViewResolver();
 		viewResolver.setViewClass(JstlView.class);
 		viewResolver.setPrefix("WEB-INF/views/");
 		viewResolver.setSuffix(".jsp");
